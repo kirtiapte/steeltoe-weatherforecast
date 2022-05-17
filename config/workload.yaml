@@ -1,0 +1,13 @@
+apiVersion: carto.run/v1alpha1
+kind: Workload
+metadata:
+  name: weatherforecast-steeltoe
+  labels:
+    apps.tanzu.vmware.com/workload-type: web
+    app.kubernetes.io/part-of: weatherforecast-steeltoe
+spec:
+  source:
+    git:
+      url: https://github.com/sample-accelerators/steeltoe-weatherforecast
+      ref:
+        branch: main
